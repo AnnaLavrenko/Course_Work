@@ -6,6 +6,7 @@ namespace SQLApp
 {
     public partial class RegisterForm : Form
     {
+        /*TEST COMMIT*/
         public RegisterForm()
         {
             InitializeComponent();
