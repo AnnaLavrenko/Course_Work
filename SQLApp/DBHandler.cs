@@ -12,7 +12,7 @@ namespace SQLApp
         private MySqlConnection connection;
         PropertiesHandler propertiesHandler = new PropertiesHandler();
         
-        public void openConnection()
+        public void OpenConnection()
         {
             propertiesHandler.readSettings();
             connection = new MySqlConnection("server=" + propertiesHandler.Host 
@@ -26,7 +26,7 @@ namespace SQLApp
             }
         }
         
-        public void closeConnection()
+        public void CloseConnection()
         {
             if (connection.State == System.Data.ConnectionState.Open)
             {
@@ -34,9 +34,13 @@ namespace SQLApp
             }
         }
 
-        public MySqlConnection getConnection()
+        public MySqlConnection GetConnection()
         {
             return connection;
+        }
+        public void ExecuteCommand (MySqlCommand commandToExecute)
+        {
+            commandToExecute.ExecuteNonQuery();
         }
     }
 }

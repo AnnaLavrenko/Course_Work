@@ -32,16 +32,17 @@ namespace SQLApp
         private void InitializeComponent()
         {
             this.passwordField = new System.Windows.Forms.TextBox();
-            this.header = new System.Windows.Forms.Label();
             this.buttonRegister = new System.Windows.Forms.Button();
             this.userField = new System.Windows.Forms.TextBox();
             this.generalPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.secondNameField = new System.Windows.Forms.TextBox();
             this.firstNameField = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.closeWindowButton = new System.Windows.Forms.Label();
+            this.headerPanel = new System.Windows.Forms.Panel();
+            this.header = new System.Windows.Forms.Label();
+            this.singUp = new System.Windows.Forms.LinkLabel();
             this.generalPanel.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.headerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // passwordField
@@ -53,20 +54,6 @@ namespace SQLApp
             this.passwordField.Size = new System.Drawing.Size(220, 19);
             this.passwordField.TabIndex = 4;
             this.passwordField.UseSystemPasswordChar = true;
-            // 
-            // header
-            // 
-            this.header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.header.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.header.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.header.Location = new System.Drawing.Point(0, 0);
-            this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(374, 100);
-            this.header.TabIndex = 0;
-            this.header.Text = "Registration Form";
-            this.header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.header_MouseDown);
-            this.header.MouseMove += new System.Windows.Forms.MouseEventHandler(this.header_MouseMove);
             // 
             // buttonRegister
             // 
@@ -82,6 +69,7 @@ namespace SQLApp
             this.buttonRegister.TabIndex = 5;
             this.buttonRegister.Text = "REGISTER";
             this.buttonRegister.UseVisualStyleBackColor = false;
+            this.buttonRegister.Click += new System.EventHandler(this.ButtonRegister_Click);
             // 
             // userField
             // 
@@ -92,22 +80,37 @@ namespace SQLApp
             this.userField.Name = "userField";
             this.userField.Size = new System.Drawing.Size(220, 26);
             this.userField.TabIndex = 4;
+            this.userField.Enter += new System.EventHandler(this.UserField_Enter);
+            this.userField.Leave += new System.EventHandler(this.UserField_Leave);
             // 
             // generalPanel
             // 
             this.generalPanel.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.generalPanel.Controls.Add(this.button1);
             this.generalPanel.Controls.Add(this.secondNameField);
             this.generalPanel.Controls.Add(this.firstNameField);
             this.generalPanel.Controls.Add(this.buttonRegister);
             this.generalPanel.Controls.Add(this.passwordField);
             this.generalPanel.Controls.Add(this.userField);
-            this.generalPanel.Controls.Add(this.panel2);
+            this.generalPanel.Controls.Add(this.headerPanel);
             this.generalPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.generalPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.generalPanel.Location = new System.Drawing.Point(0, 0);
             this.generalPanel.Name = "generalPanel";
             this.generalPanel.Size = new System.Drawing.Size(374, 450);
             this.generalPanel.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(114, 415);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(138, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "ProfessionalDebug";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // secondNameField
             // 
@@ -118,6 +121,8 @@ namespace SQLApp
             this.secondNameField.Name = "secondNameField";
             this.secondNameField.Size = new System.Drawing.Size(220, 26);
             this.secondNameField.TabIndex = 9;
+            this.secondNameField.Enter += new System.EventHandler(this.SecondNameField_Enter);
+            this.secondNameField.Leave += new System.EventHandler(this.SecondNameField_Leave);
             // 
             // firstNameField
             // 
@@ -128,30 +133,44 @@ namespace SQLApp
             this.firstNameField.Name = "firstNameField";
             this.firstNameField.Size = new System.Drawing.Size(220, 26);
             this.firstNameField.TabIndex = 7;
+            this.firstNameField.Enter += new System.EventHandler(this.FirstNameField_Enter);
+            this.firstNameField.Leave += new System.EventHandler(this.FirstNameField_Leave);
             // 
-            // panel2
+            // headerPanel
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.closeWindowButton);
-            this.panel2.Controls.Add(this.header);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(374, 100);
-            this.panel2.TabIndex = 0;
+            this.headerPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.headerPanel.Controls.Add(this.singUp);
+            this.headerPanel.Controls.Add(this.header);
+            this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerPanel.Location = new System.Drawing.Point(0, 0);
+            this.headerPanel.Name = "headerPanel";
+            this.headerPanel.Size = new System.Drawing.Size(374, 100);
+            this.headerPanel.TabIndex = 0;
             // 
-            // closeWindowButton
+            // header
             // 
-            this.closeWindowButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeWindowButton.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.closeWindowButton.ForeColor = System.Drawing.Color.Black;
-            this.closeWindowButton.Location = new System.Drawing.Point(344, 0);
-            this.closeWindowButton.Name = "closeWindowButton";
-            this.closeWindowButton.Size = new System.Drawing.Size(30, 25);
-            this.closeWindowButton.TabIndex = 1;
-            this.closeWindowButton.Text = "X";
-            this.closeWindowButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.closeWindowButton.Click += new System.EventHandler(this.closeWindowButton_Click);
+            this.header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.header.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.header.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.header.Location = new System.Drawing.Point(0, 0);
+            this.header.Name = "header";
+            this.header.Size = new System.Drawing.Size(374, 100);
+            this.header.TabIndex = 0;
+            this.header.Text = "Registration Form";
+            this.header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.header.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Header_MouseMove);
+            // 
+            // singUp
+            // 
+            this.singUp.AutoSize = true;
+            this.singUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.singUp.Location = new System.Drawing.Point(311, 9);
+            this.singUp.Name = "singUp";
+            this.singUp.Size = new System.Drawing.Size(55, 16);
+            this.singUp.TabIndex = 8;
+            this.singUp.TabStop = true;
+            this.singUp.Text = "Sing In";
+            this.singUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SingUp_LinkClicked);
             // 
             // RegisterForm
             // 
@@ -159,26 +178,27 @@ namespace SQLApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(374, 450);
             this.Controls.Add(this.generalPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegisterForm";
             this.Text = "RegisterForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegisterForm_FormClosed);
             this.generalPanel.ResumeLayout(false);
             this.generalPanel.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.headerPanel.ResumeLayout(false);
+            this.headerPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label closeWindowButton;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox userField;
         private System.Windows.Forms.TextBox passwordField;
         private System.Windows.Forms.Button buttonRegister;
         private System.Windows.Forms.TextBox firstNameField;
         private System.Windows.Forms.TextBox secondNameField;
-        private System.Windows.Forms.Label header;
         private System.Windows.Forms.Panel generalPanel;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel headerPanel;
+        private System.Windows.Forms.Label header;
+        private System.Windows.Forms.LinkLabel singUp;
     }
 }

@@ -32,7 +32,7 @@ namespace SQLApp
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -42,12 +42,12 @@ namespace SQLApp
 
         private void closeWindowButton_MouseEnter(object sender, EventArgs e)
         {
-            
+
         }
         Point lastPoin;
         private void label1_MouseMove(object sender, MouseEventArgs e)
         {
-            if(e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left)
             {
                 this.Left += e.X - lastPoin.X;
                 this.Top += e.Y - lastPoin.Y;
@@ -63,20 +63,44 @@ namespace SQLApp
         {
             String loginUser = userField.Text;
             String passwordUser = passwordField.Text;
-            
+
             DBHandler dbHandler = new DBHandler();
-            dbHandler.openConnection();
+            dbHandler.OpenConnection();
             DataTable dbTable = new DataTable();
             MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter();
 
-            MySqlCommand mySqlCommand = new MySqlCommand("select * from users where login=@uP and password=@uL", dbHandler.getConnection());
+            MySqlCommand mySqlCommand = new MySqlCommand("select * from users where login=@uL and password=@uP", dbHandler.GetConnection());
             mySqlCommand.Parameters.Add("@uP", MySqlDbType.VarChar).Value = passwordUser;
             mySqlCommand.Parameters.Add("@uL", MySqlDbType.VarChar).Value = loginUser;
 
             mySqlDataAdapter.SelectCommand = mySqlCommand;
             mySqlDataAdapter.Fill(dbTable);
 
-            MessageBox.Show(dbTable.Rows.Count > 0 ? "Successfully logged in" : "User doesn't exist");
+            if (dbTable.Rows.Count > 0)
+            {
+                this.Hide();
+                Shop shop = new Shop();
+
+                shop.Show();
+            }
+            else
+            {
+                MessageBox.Show("User doesn't exist");
+            }
+
+
+        }
+
+        private void SingUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.Show();
+        }
+
+        private void AuthForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
