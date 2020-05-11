@@ -28,82 +28,120 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.authPanel = new System.Windows.Forms.Panel();
+            this.catalogueButton = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.headerPanel = new System.Windows.Forms.Panel();
-            this.shopLabel = new System.Windows.Forms.Label();
-            this.logOut = new System.Windows.Forms.LinkLabel();
-            this.authPanel.SuspendLayout();
+            this.welcomeMessageLabel = new System.Windows.Forms.Label();
+            this.sidePanel = new System.Windows.Forms.Panel();
+            this.scButton = new System.Windows.Forms.Button();
+            this.catalogueControl1 = new SQLApp.CatalogueControl();
+            this.shoppingCartControl1 = new SQLApp.ShoppingCartControl();
             this.headerPanel.SuspendLayout();
+            this.sidePanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // authPanel
+            // catalogueButton
             // 
-            this.authPanel.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.authPanel.Controls.Add(this.headerPanel);
-            this.authPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.authPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.authPanel.Location = new System.Drawing.Point(0, 0);
-            this.authPanel.Name = "authPanel";
-            this.authPanel.Size = new System.Drawing.Size(800, 450);
-            this.authPanel.TabIndex = 1;
+            this.catalogueButton.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.catalogueButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.catalogueButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.catalogueButton.Location = new System.Drawing.Point(0, 47);
+            this.catalogueButton.Name = "catalogueButton";
+            this.catalogueButton.Size = new System.Drawing.Size(120, 30);
+            this.catalogueButton.TabIndex = 0;
+            this.catalogueButton.Text = "Catalogue";
+            this.catalogueButton.UseVisualStyleBackColor = false;
+            this.catalogueButton.Click += new System.EventHandler(this.CatalogueButton_Click);
             // 
             // headerPanel
             // 
-            this.headerPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.headerPanel.Controls.Add(this.logOut);
-            this.headerPanel.Controls.Add(this.shopLabel);
+            this.headerPanel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.headerPanel.Controls.Add(this.welcomeMessageLabel);
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(0, 0);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(800, 100);
-            this.headerPanel.TabIndex = 0;
+            this.headerPanel.Size = new System.Drawing.Size(918, 41);
+            this.headerPanel.TabIndex = 4;
             // 
-            // shopLabel
+            // welcomeMessageLabel
             // 
-            this.shopLabel.BackColor = System.Drawing.Color.Aquamarine;
-            this.shopLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.shopLabel.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shopLabel.Location = new System.Drawing.Point(0, 0);
-            this.shopLabel.Name = "shopLabel";
-            this.shopLabel.Size = new System.Drawing.Size(800, 100);
-            this.shopLabel.TabIndex = 0;
-            this.shopLabel.Text = "Welcome to Candy Shop";
-            this.shopLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.welcomeMessageLabel.AutoSize = true;
+            this.welcomeMessageLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.welcomeMessageLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.welcomeMessageLabel.ForeColor = System.Drawing.Color.DarkOrange;
+            this.welcomeMessageLabel.Location = new System.Drawing.Point(126, 4);
+            this.welcomeMessageLabel.Name = "welcomeMessageLabel";
+            this.welcomeMessageLabel.Size = new System.Drawing.Size(159, 17);
+            this.welcomeMessageLabel.TabIndex = 0;
+            this.welcomeMessageLabel.Text = "Welcome to the Jungle";
             // 
-            // logOut
+            // sidePanel
             // 
-            this.logOut.AutoSize = true;
-            this.logOut.BackColor = System.Drawing.Color.White;
-            this.logOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.logOut.Location = new System.Drawing.Point(733, 9);
-            this.logOut.Name = "logOut";
-            this.logOut.Size = new System.Drawing.Size(61, 16);
-            this.logOut.TabIndex = 9;
-            this.logOut.TabStop = true;
-            this.logOut.Text = "Log Out";
-            this.logOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LogOut_LinkClicked);
+            this.sidePanel.Controls.Add(this.scButton);
+            this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sidePanel.Location = new System.Drawing.Point(0, 41);
+            this.sidePanel.Name = "sidePanel";
+            this.sidePanel.Size = new System.Drawing.Size(120, 488);
+            this.sidePanel.TabIndex = 5;
+            // 
+            // scButton
+            // 
+            this.scButton.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.scButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.scButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.scButton.Location = new System.Drawing.Point(0, 42);
+            this.scButton.Name = "scButton";
+            this.scButton.Size = new System.Drawing.Size(120, 30);
+            this.scButton.TabIndex = 7;
+            this.scButton.Text = "Shopping Cart";
+            this.scButton.UseVisualStyleBackColor = false;
+            this.scButton.Click += new System.EventHandler(this.ScButton_Click);
+            // 
+            // catalogueControl1
+            // 
+            this.catalogueControl1.Location = new System.Drawing.Point(123, 47);
+            this.catalogueControl1.Name = "catalogueControl1";
+            this.catalogueControl1.Size = new System.Drawing.Size(790, 415);
+            this.catalogueControl1.TabIndex = 6;
+            this.catalogueControl1.Load += new System.EventHandler(this.CatalogueControl1_Load);
+            // 
+            // shoppingCartControl1
+            // 
+            this.shoppingCartControl1.Location = new System.Drawing.Point(123, 47);
+            this.shoppingCartControl1.Name = "shoppingCartControl1";
+            this.shoppingCartControl1.Size = new System.Drawing.Size(790, 415);
+            this.shoppingCartControl1.TabIndex = 7;
             // 
             // Shop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.authPanel);
+            this.ClientSize = new System.Drawing.Size(918, 529);
+            this.Controls.Add(this.shoppingCartControl1);
+            this.Controls.Add(this.catalogueControl1);
+            this.Controls.Add(this.catalogueButton);
+            this.Controls.Add(this.sidePanel);
+            this.Controls.Add(this.headerPanel);
             this.Name = "Shop";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Shop";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Shop_FormClosed);
-            this.authPanel.ResumeLayout(false);
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
+            this.sidePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel authPanel;
+        private System.Windows.Forms.Button catalogueButton;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel headerPanel;
-        private System.Windows.Forms.Label shopLabel;
-        private System.Windows.Forms.LinkLabel logOut;
+        private System.Windows.Forms.Label welcomeMessageLabel;
+        private System.Windows.Forms.Panel sidePanel;
+        private CatalogueControl catalogueControl1;
+        private System.Windows.Forms.Button scButton;
+        private ShoppingCartControl shoppingCartControl1;
     }
 }

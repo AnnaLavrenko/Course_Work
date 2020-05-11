@@ -71,6 +71,12 @@
     <Compile Include="AuthForm.Designer.cs">
       <DependentUpon>AuthForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CatalogueControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CatalogueControl.Designer.cs">
+      <DependentUpon>CatalogueControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="PropertiesHandler.cs" />
@@ -87,8 +93,17 @@
     <Compile Include="Shop.Designer.cs">
       <DependentUpon>Shop.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShoppingCartControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShoppingCartControl.Designer.cs">
+      <DependentUpon>ShoppingCartControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AuthForm.resx">
       <DependentUpon>AuthForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalogueControl.resx">
+      <DependentUpon>CatalogueControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -105,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Shop.resx">
       <DependentUpon>Shop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShoppingCartControl.resx">
+      <DependentUpon>ShoppingCartControl.cs</DependentUpon>
     </EmbeddedResource>
     <Resource Include="dbconnection.properties">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -127,6 +145,7 @@
     <Content Include="images\iconfinder_user_1608727.png" />
     <Content Include="images\password.png" />
     <Content Include="images\user.png" />
+    <None Include="Resources\20150702-sous-vide-hamburger-anova-primary-1500x1125.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

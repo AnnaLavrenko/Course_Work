@@ -20,10 +20,6 @@ namespace SQLApp
             this.passwordField.Size = new Size(passwordField.Size.Width, userField.Size.Height);
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void closeWindowButton_Click(object sender, EventArgs e)
         {
@@ -80,7 +76,6 @@ namespace SQLApp
             {
                 this.Hide();
                 Shop shop = new Shop();
-
                 shop.Show();
             }
             else

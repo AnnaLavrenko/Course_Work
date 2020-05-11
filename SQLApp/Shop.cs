@@ -15,18 +15,28 @@ namespace SQLApp
         public Shop()
         {
             InitializeComponent();
-        }
-
-        private void LogOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            AuthForm authForm = new AuthForm();
-            authForm.Show();
+            catalogueControl1.Show();
         }
 
         private void Shop_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void CatalogueControl1_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void ScButton_Click(object sender, EventArgs e)
+        {
+            catalogueControl1.Hide();
+            shoppingCartControl1.Show();
+        }
+
+        private void CatalogueButton_Click(object sender, EventArgs e)
+        {
+            shoppingCartControl1.Hide();
+            catalogueControl1.Show();
         }
     }
 }

@@ -158,6 +158,7 @@ namespace SQLApp
             mySqlDataAdapter.SelectCommand = mySqlCommand;
             mySqlDataAdapter.Fill(dbTable);
 
+            
             if(dbTable.Rows.Count > 0)
             {
                 MessageBox.Show("User Name Already Exist");

@@ -17,7 +17,7 @@ namespace SQLApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AuthForm());
+            Application.Run(new Shop());
         }
     }
 }

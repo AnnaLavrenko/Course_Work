@@ -32,15 +32,15 @@
             this.buttonLogin = new System.Windows.Forms.Button();
             this.passwordField = new System.Windows.Forms.TextBox();
             this.userField = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.authLabel = new System.Windows.Forms.Label();
             this.singUp = new System.Windows.Forms.LinkLabel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.authPanel.SuspendLayout();
+            this.headerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.headerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // authPanel
@@ -97,26 +97,6 @@
             this.userField.TabIndex = 4;
             this.userField.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::SQLApp.Properties.Resources.iconfinder_user_1608727;
-            this.pictureBox2.Location = new System.Drawing.Point(39, 124);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SQLApp.Properties.Resources.password;
-            this.pictureBox1.Location = new System.Drawing.Point(39, 162);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // headerPanel
             // 
             this.headerPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -127,7 +107,6 @@
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(354, 100);
             this.headerPanel.TabIndex = 0;
-            this.headerPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // authLabel
             // 
@@ -155,6 +134,26 @@
             this.singUp.Text = "Sing up";
             this.singUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SingUp_LinkClicked);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::SQLApp.Properties.Resources.iconfinder_user_1608727;
+            this.pictureBox2.Location = new System.Drawing.Point(39, 124);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SQLApp.Properties.Resources.password;
+            this.pictureBox1.Location = new System.Drawing.Point(39, 162);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // AuthForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,14 +161,15 @@
             this.ClientSize = new System.Drawing.Size(354, 446);
             this.Controls.Add(this.authPanel);
             this.Name = "AuthForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AuthForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AuthForm_FormClosed);
             this.authPanel.ResumeLayout(false);
             this.authPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
