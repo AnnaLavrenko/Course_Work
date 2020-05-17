@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="AuthForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,12 @@
       <DependentUpon>CatalogueControl.cs</DependentUpon>
     </Compile>
     <Compile Include="DBHandler.cs" />
+    <Compile Include="listItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="listItem.Designer.cs">
+      <DependentUpon>listItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="PropertiesHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,17 +105,17 @@
     <Compile Include="Shop.Designer.cs">
       <DependentUpon>Shop.cs</DependentUpon>
     </Compile>
-    <Compile Include="ShoppingCartControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ShoppingCartControl.Designer.cs">
-      <DependentUpon>ShoppingCartControl.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AuthForm.resx">
       <DependentUpon>AuthForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CatalogueControl.resx">
       <DependentUpon>CatalogueControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listItem.resx">
+      <DependentUpon>listItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -120,9 +132,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Shop.resx">
       <DependentUpon>Shop.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ShoppingCartControl.resx">
-      <DependentUpon>ShoppingCartControl.cs</DependentUpon>
     </EmbeddedResource>
     <Resource Include="dbconnection.properties">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -141,6 +150,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="images\20150702-sous-vide-hamburger-anova-primary-1500x1125.jpg" />
+    <None Include="images\close.png" />
     <Content Include="images\iconfinder_user-alt_285645.png" />
     <Content Include="images\iconfinder_user_1608727.png" />
     <Content Include="images\password.png" />

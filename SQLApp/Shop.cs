@@ -12,10 +12,10 @@ namespace SQLApp
 {
     public partial class Shop : Form
     {
+        
         public Shop()
         {
             InitializeComponent();
-            catalogueControl1.Show();
         }
 
         private void Shop_FormClosed(object sender, FormClosedEventArgs e)
@@ -25,18 +25,20 @@ namespace SQLApp
 
         private void CatalogueControl1_Load(object sender, EventArgs e)
         {
+            catalogueControl1.Show();
         }
 
-        private void ScButton_Click(object sender, EventArgs e)
+        private void AboutButton_Click(object sender, EventArgs e)
         {
             catalogueControl1.Hide();
-            shoppingCartControl1.Show();
+            about1.Show();
         }
 
         private void CatalogueButton_Click(object sender, EventArgs e)
         {
-            shoppingCartControl1.Hide();
+            about1.Hide();
             catalogueControl1.Show();
+
         }
     }
 }

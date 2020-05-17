@@ -77,6 +77,7 @@ namespace SQLApp
                 this.Hide();
                 Shop shop = new Shop();
                 shop.Show();
+                this.Close();
             }
             else
             {

@@ -1,6 +1,6 @@
 ﻿namespace SQLApp
 {
-    partial class ShoppingCartControl
+    partial class About
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,27 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.aboutLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // aboutLabel
             // 
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(790, 415);
-            this.flowLayoutPanel1.TabIndex = 0;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.FlowLayoutPanel1_Paint);
+            this.aboutLabel.AutoSize = true;
+            this.aboutLabel.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.aboutLabel.Location = new System.Drawing.Point(228, 170);
+            this.aboutLabel.Name = "aboutLabel";
+            this.aboutLabel.Size = new System.Drawing.Size(288, 38);
+            this.aboutLabel.TabIndex = 0;
+            this.aboutLabel.Text = "ABOUT OUR SHOP";
             // 
-            // ShoppingCartControl
+            // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Name = "ShoppingCartControl";
+            this.Controls.Add(this.aboutLabel);
+            this.Name = "About";
             this.Size = new System.Drawing.Size(790, 415);
-            this.Load += new System.EventHandler(this.ShoppingCartControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -56,6 +55,6 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label aboutLabel;
     }
 }

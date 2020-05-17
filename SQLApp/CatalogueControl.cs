@@ -12,7 +12,7 @@ namespace SQLApp
 {
     public partial class CatalogueControl : UserControl
     {
-        ShoppingCartControl shoppingCart = new ShoppingCartControl();
+        private Label label;
         public CatalogueControl()
         {
             InitializeComponent();
@@ -25,12 +25,16 @@ namespace SQLApp
 
         private void BuyButton_Click(object sender, EventArgs e)
         {
-            shoppingCart.AddPanel(panel1);
+            label = new Label();
+            label.Text = label1.Text;
+            flowLayoutPanelShoppingCart.Controls.Add(label);
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private Label AddLabel(Label label)
         {
-
+            Label l = new Label();
+            l = label;
+            return l;
         }
     }
 }

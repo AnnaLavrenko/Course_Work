@@ -21,21 +21,6 @@ namespace SQLApp
             passwordField.Text = "Password";
         }
 
-        Point lastPoin;
-        private void Header_MouseMove(object sender, MouseEventArgs e)
-        {
-            if(e.Button == MouseButtons.Left)
-            {
-                this.Left += e.X - lastPoin.X;
-                this.Top += e.Y - lastPoin.Y;
-            }
-        }
-
-        private void Reader_MouseDown(object sender, MouseEventArgs e)
-        {
-            lastPoin = new Point(e.X, e.Y);
-        }
-
         private void UserField_Enter(object sender, EventArgs e)
         {
             if (userField.Text == "User Name")
