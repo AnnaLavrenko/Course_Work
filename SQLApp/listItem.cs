@@ -10,11 +10,25 @@ using System.Windows.Forms;
 
 namespace SQLApp
 {
-    public partial class listItem : UserControl
+    public partial class ListItem : UserControl
     {
-        [Category("Custom Props")]
+        private string _title;
+        private string _price;
 
-        public listItem()
+        public string Price
+        {
+            get { return _price; }
+            set { _price = value; this.labelPrice.Text = value; }
+        }
+
+        public string Title
+        {
+            get { return _title; }
+            set { _title = value; this.labelItem.Text = value; }
+        }
+
+
+        public ListItem()
         {
             InitializeComponent();
         }

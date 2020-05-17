@@ -84,11 +84,11 @@
       <DependentUpon>CatalogueControl.cs</DependentUpon>
     </Compile>
     <Compile Include="DBHandler.cs" />
-    <Compile Include="listItem.cs">
+    <Compile Include="ListItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="listItem.Designer.cs">
-      <DependentUpon>listItem.cs</DependentUpon>
+    <Compile Include="ListItem.Designer.cs">
+      <DependentUpon>ListItem.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="PropertiesHandler.cs" />
@@ -114,8 +114,8 @@
     <EmbeddedResource Include="CatalogueControl.resx">
       <DependentUpon>CatalogueControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="listItem.resx">
-      <DependentUpon>listItem.cs</DependentUpon>
+    <EmbeddedResource Include="ListItem.resx">
+      <DependentUpon>ListItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
