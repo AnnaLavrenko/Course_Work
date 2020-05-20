@@ -14,7 +14,6 @@ namespace SQLApp
     {
         private string _title;
         private string _price;
-
         public string Price
         {
             get { return _price; }
@@ -35,7 +34,7 @@ namespace SQLApp
 
         private void PictureBox1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
         }
     }
 }
