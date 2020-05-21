@@ -16,8 +16,8 @@ namespace SQLApp
             userField.ForeColor = Color.Gray;
             firstNameField.Text = "First Name";
             firstNameField.ForeColor = Color.Gray;
-            secondNameField.Text = "Second Name";
-            secondNameField.ForeColor = Color.Gray;
+            LastNameField.Text = "Second Name";
+            LastNameField.ForeColor = Color.Gray;
             passwordField.Text = "Password";
         }
 
@@ -26,7 +26,7 @@ namespace SQLApp
             if (userField.Text == "User Name")
             {
                 userField.Text = "";
-                userField.ForeColor = Color.Black;
+                userField.ForeColor = Color.White;
             }
                 
         }
@@ -45,7 +45,7 @@ namespace SQLApp
             if (firstNameField.Text == "First Name")
             {
                 firstNameField.Text = "";
-                firstNameField.ForeColor = Color.Black;
+                firstNameField.ForeColor = Color.White;
             }
         }
 
@@ -60,19 +60,40 @@ namespace SQLApp
 
         private void SecondNameField_Enter(object sender, EventArgs e)
         {
-            if (secondNameField.Text == "Second Name")
+            if (LastNameField.Text == "Second Name")
             {
-                secondNameField.Text = "";
-                secondNameField.ForeColor = Color.Black;
+                LastNameField.Text = "";
+                LastNameField.ForeColor = Color.White;
             }
         }
 
         private void SecondNameField_Leave(object sender, EventArgs e)
         {
-            if (secondNameField.Text == "")
+            if (LastNameField.Text == "")
             {
-                secondNameField.Text = "Second Name";
-                secondNameField.ForeColor = Color.Gray;
+                LastNameField.Text = "Password";
+                LastNameField.ForeColor = Color.Gray;
+            }
+        }
+
+        private void PasswordField_Enter(object sender, EventArgs e)
+        {
+            if (passwordField.Text == "Password")
+            {
+                if (Control.IsKeyLocked(Keys.CapsLock))
+                    CapsLockOntoolTip.SetToolTip(passwordField, "CAPS LOCK IS ON");
+                passwordField.Clear();
+                passwordField.Text = "";
+                passwordField.ForeColor = Color.White;
+            }
+        }
+
+        private void PasswordField_Leave(object sender, EventArgs e)
+        {
+            if (passwordField.Text == "")
+            {
+                passwordField.Text = "Second Name";
+                passwordField.ForeColor = Color.Gray;
             }
         }
 
@@ -96,6 +117,8 @@ namespace SQLApp
                 return;
             }
 
+
+
             if (IsUserExist()) return;
 
             DBHandler dBHandler = new DBHandler();
@@ -104,7 +127,7 @@ namespace SQLApp
             mySqlCommand.Parameters.Add("@login", MySqlDbType.VarChar).Value = userField.Text;
             mySqlCommand.Parameters.Add("@password", MySqlDbType.VarChar).Value = passwordField.Text;
             mySqlCommand.Parameters.Add("@firstName", MySqlDbType.VarChar).Value = firstNameField.Text;
-            mySqlCommand.Parameters.Add("@secondName", MySqlDbType.VarChar).Value = secondNameField.Text;
+            mySqlCommand.Parameters.Add("@secondName", MySqlDbType.VarChar).Value = LastNameField.Text;
             
             if (mySqlCommand.ExecuteNonQuery() == 1)
             {

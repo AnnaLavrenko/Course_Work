@@ -19,19 +19,19 @@ namespace SQLApp
         private string _database;
         public PropertiesHandler()
         {
-            //var data = new Dictionary<string, string>();
-            //foreach (var row in File.ReadAllLines(PATH_TO_SETTINGS))
-            //{
-            //    data.Add(row.Split('=')[0], string.Join("=", row.Split('=').Skip(1).ToArray()));
-            //}
+            var data = new Dictionary<string, string>();
+            foreach (var row in File.ReadAllLines(PATH_TO_SETTINGS))
+            {
+                data.Add(row.Split('=')[0], row.Split('=')[1] + ";");
+            }
         }       
         public void readSettings()
         {
             var data = new Dictionary<string, string>();
             foreach (var row in File.ReadAllLines(PATH_TO_SETTINGS))
             {
-                data.Add(row.Split('=')[0], string.Join("=", row.Split('=').Skip(1).ToArray()));
-                //data.Add(row.Split('=')[0], row.Split('=')[1] + ";");
+                //data.Add(row.Split('=')[0], string.Join("=", row.Split('=').Skip(1).ToArray()));
+                data.Add(row.Split('=')[0], row.Split('=')[1] + ";");
             }
             _host = data["host"];
             _port = data["port"];

@@ -65,57 +65,50 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="About.cs">
+    <Compile Include="UserControls\About.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="About.Designer.cs">
+    <Compile Include="UserControls\About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
-    <Compile Include="AuthForm.cs">
+    <Compile Include="Forms\AuthForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AuthForm.Designer.cs">
+    <Compile Include="Forms\AuthForm.Designer.cs">
       <DependentUpon>AuthForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CatalogueControl.cs">
+    <Compile Include="UserControls\CatalogueControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CatalogueControl.Designer.cs">
+    <Compile Include="UserControls\CatalogueControl.Designer.cs">
       <DependentUpon>CatalogueControl.cs</DependentUpon>
     </Compile>
     <Compile Include="DBHandler.cs" />
-    <Compile Include="ListItem.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ListItem.Designer.cs">
-      <DependentUpon>ListItem.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Item.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="PropertiesHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegisterForm.cs">
+    <Compile Include="Forms\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegisterForm.Designer.cs">
+    <Compile Include="Forms\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Shop.cs">
+    <Compile Include="Forms\Shop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Shop.Designer.cs">
+    <Compile Include="Forms\Shop.Designer.cs">
       <DependentUpon>Shop.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="About.resx">
+    <Compile Include="ShoppingCart.cs" />
+    <EmbeddedResource Include="UserControls\About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AuthForm.resx">
+    <EmbeddedResource Include="Forms\AuthForm.resx">
       <DependentUpon>AuthForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CatalogueControl.resx">
+    <EmbeddedResource Include="UserControls\CatalogueControl.resx">
       <DependentUpon>CatalogueControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListItem.resx">
-      <DependentUpon>ListItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -127,14 +120,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RegisterForm.resx">
+    <EmbeddedResource Include="Forms\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Shop.resx">
+    <EmbeddedResource Include="Forms\Shop.resx">
       <DependentUpon>Shop.cs</DependentUpon>
     </EmbeddedResource>
     <Resource Include="dbconnection.properties">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -150,6 +143,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\user-5-32.png" />
+    <None Include="Resources\lock-32.png" />
+    <None Include="Resources\contacts-32.png" />
+    <None Include="Resources\info-2-16.png" />
+    <None Include="Resources\address-white-icon-png-.png" />
+    <None Include="Resources\shopping-cart-16.png" />
+    <None Include="Resources\shopping-cart-xxl.png" />
     <None Include="images\20150702-sous-vide-hamburger-anova-primary-1500x1125.jpg" />
     <None Include="images\close.png" />
     <Content Include="images\iconfinder_user-alt_285645.png" />
