@@ -16,43 +16,19 @@ namespace SQLApp
         public AuthForm()
         {
             InitializeComponent();
+            userField.Text = "Login";
+            userField.ForeColor = Color.Gray;
+            passwordField.Text = "Password";
+            passwordField.ForeColor = Color.Gray;
             this.passwordField.AutoSize = false;
             this.passwordField.Size = new Size(passwordField.Size.Width, userField.Size.Height);
+            this.ActiveControl = authLabel;
         }
 
 
         private void closeWindowButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void closeWindowButton_MouseEnter(object sender, EventArgs e)
-        {
-
-        }
-        Point lastPoin;
-        private void label1_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                this.Left += e.X - lastPoin.X;
-                this.Top += e.Y - lastPoin.Y;
-            }
-        }
-
-        private void label1_MouseDown(object sender, MouseEventArgs e)
-        {
-            lastPoin = new Point(e.X, e.Y);
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
@@ -81,7 +57,6 @@ namespace SQLApp
                 this.Hide();
                 Shop shop = new Shop(new User(loginUser, birthDay));
                 shop.Show();
-                //this.Close();
             }
             else
             {
@@ -99,6 +74,42 @@ namespace SQLApp
         private void AuthForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void UserField_Enter(object sender, EventArgs e)
+        {
+            if (userField.Text == "Login")
+            {
+                userField.Text = "";
+                userField.ForeColor = Color.White;
+            }
+        }
+
+        private void UserField_Leave(object sender, EventArgs e)
+        {
+            if (userField.Text == "")
+            {
+                userField.Text = "Login";
+                userField.ForeColor = Color.Gray;
+            }
+        }
+
+        private void PasswordField_Enter(object sender, EventArgs e)
+        {
+            if (passwordField.Text == "Password")
+            {
+                passwordField.Text = "";
+                passwordField.ForeColor = Color.White;
+            }
+        }
+
+        private void PasswordField_Leave(object sender, EventArgs e)
+        {
+            if (passwordField.Text == "")
+            {
+                passwordField.Text = "Password";
+                passwordField.ForeColor = Color.Gray;
+            }
         }
     }
 }

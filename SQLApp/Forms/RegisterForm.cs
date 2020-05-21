@@ -12,6 +12,7 @@ namespace SQLApp
         public RegisterForm()
         {
             InitializeComponent();
+            
             userField.Text = "User Name";
             userField.ForeColor = Color.Gray;
             firstNameField.Text = "First Name";
@@ -19,6 +20,7 @@ namespace SQLApp
             LastNameField.Text = "Last Name";
             LastNameField.ForeColor = Color.Gray;
             passwordField.Text = "Password";
+            this.ActiveControl = labelHeader;
         }
 
         private void UserField_Enter(object sender, EventArgs e)

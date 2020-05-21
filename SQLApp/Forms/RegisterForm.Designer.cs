@@ -62,6 +62,7 @@ namespace SQLApp
             // 
             // passwordField
             // 
+            this.passwordField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.passwordField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordField.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -77,6 +78,7 @@ namespace SQLApp
             // 
             // buttonRegister
             // 
+            this.buttonRegister.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(57)))));
             this.buttonRegister.FlatAppearance.BorderSize = 0;
             this.buttonRegister.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -86,13 +88,14 @@ namespace SQLApp
             this.buttonRegister.Location = new System.Drawing.Point(77, 365);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(220, 30);
-            this.buttonRegister.TabIndex = 5;
+            this.buttonRegister.TabIndex = 6;
             this.buttonRegister.Text = "REGISTER";
             this.buttonRegister.UseVisualStyleBackColor = false;
             this.buttonRegister.Click += new System.EventHandler(this.ButtonRegister_Click);
             // 
             // userField
             // 
+            this.userField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.userField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.userField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.userField.Font = new System.Drawing.Font("Century Gothic", 14.25F);
@@ -101,7 +104,7 @@ namespace SQLApp
             this.userField.Multiline = true;
             this.userField.Name = "userField";
             this.userField.Size = new System.Drawing.Size(220, 25);
-            this.userField.TabIndex = 4;
+            this.userField.TabIndex = 1;
             this.userField.Text = "User Name";
             this.userField.Enter += new System.EventHandler(this.UserField_Enter);
             this.userField.Leave += new System.EventHandler(this.UserField_Leave);
@@ -125,7 +128,7 @@ namespace SQLApp
             this.generalPanel.Controls.Add(this.buttonRegister);
             this.generalPanel.Controls.Add(this.passwordField);
             this.generalPanel.Controls.Add(this.userField);
-            this.generalPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.generalPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.generalPanel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.generalPanel.Location = new System.Drawing.Point(0, 0);
             this.generalPanel.Name = "generalPanel";
@@ -134,16 +137,18 @@ namespace SQLApp
             // 
             // dateTimePicker
             // 
+            this.dateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.dateTimePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.dateTimePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.dateTimePicker.Location = new System.Drawing.Point(73, 312);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(231, 23);
-            this.dateTimePicker.TabIndex = 15;
+            this.dateTimePicker.TabIndex = 5;
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox4.Image = global::SQLApp.Properties.Resources.user_5_32;
             this.pictureBox4.Location = new System.Drawing.Point(54, 208);
             this.pictureBox4.Name = "pictureBox4";
@@ -154,6 +159,7 @@ namespace SQLApp
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox3.Image = global::SQLApp.Properties.Resources.user_5_32;
             this.pictureBox3.Location = new System.Drawing.Point(54, 169);
             this.pictureBox3.Name = "pictureBox3";
@@ -164,6 +170,7 @@ namespace SQLApp
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox1.Image = global::SQLApp.Properties.Resources.lock_32;
             this.pictureBox1.Location = new System.Drawing.Point(54, 249);
             this.pictureBox1.Name = "pictureBox1";
@@ -174,6 +181,7 @@ namespace SQLApp
             // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Location = new System.Drawing.Point(54, 285);
             this.panel4.Name = "panel4";
@@ -182,6 +190,7 @@ namespace SQLApp
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Location = new System.Drawing.Point(54, 241);
             this.panel3.Name = "panel3";
@@ -190,6 +199,7 @@ namespace SQLApp
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(54, 202);
             this.panel2.Name = "panel2";
@@ -198,6 +208,7 @@ namespace SQLApp
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(54, 162);
             this.panel1.Name = "panel1";
@@ -206,6 +217,7 @@ namespace SQLApp
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox2.Image = global::SQLApp.Properties.Resources.contacts_32;
             this.pictureBox2.Location = new System.Drawing.Point(54, 123);
             this.pictureBox2.Name = "pictureBox2";
@@ -216,6 +228,8 @@ namespace SQLApp
             // 
             // panelHeader
             // 
+            this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelHeader.Controls.Add(this.singUp);
             this.panelHeader.Controls.Add(this.labelHeader);
             this.panelHeader.Font = new System.Drawing.Font("Century Gothic", 18F);
@@ -226,14 +240,14 @@ namespace SQLApp
             // 
             // singUp
             // 
+            this.singUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.singUp.AutoSize = true;
             this.singUp.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.singUp.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.singUp.Location = new System.Drawing.Point(313, 7);
             this.singUp.Name = "singUp";
             this.singUp.Size = new System.Drawing.Size(49, 17);
-            this.singUp.TabIndex = 8;
-            this.singUp.TabStop = true;
+            this.singUp.TabIndex = 15;
             this.singUp.Text = "Sing In";
             this.singUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SingUp_LinkClicked);
             // 
@@ -263,6 +277,7 @@ namespace SQLApp
             // 
             // LastNameField
             // 
+            this.LastNameField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.LastNameField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.LastNameField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LastNameField.Font = new System.Drawing.Font("Century Gothic", 14.25F);
@@ -271,13 +286,14 @@ namespace SQLApp
             this.LastNameField.Multiline = true;
             this.LastNameField.Name = "LastNameField";
             this.LastNameField.Size = new System.Drawing.Size(220, 25);
-            this.LastNameField.TabIndex = 9;
+            this.LastNameField.TabIndex = 3;
             this.LastNameField.Text = "Last Name";
             this.LastNameField.Enter += new System.EventHandler(this.LastNameField_Enter);
             this.LastNameField.Leave += new System.EventHandler(this.LastNameField_Leave);
             // 
             // firstNameField
             // 
+            this.firstNameField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.firstNameField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.firstNameField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.firstNameField.Font = new System.Drawing.Font("Century Gothic", 14.25F);
@@ -286,7 +302,7 @@ namespace SQLApp
             this.firstNameField.Multiline = true;
             this.firstNameField.Name = "firstNameField";
             this.firstNameField.Size = new System.Drawing.Size(220, 25);
-            this.firstNameField.TabIndex = 7;
+            this.firstNameField.TabIndex = 2;
             this.firstNameField.Text = "First Name";
             this.firstNameField.Enter += new System.EventHandler(this.FirstNameField_Enter);
             this.firstNameField.Leave += new System.EventHandler(this.FirstNameField_Leave);

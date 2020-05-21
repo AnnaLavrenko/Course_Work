@@ -65,6 +65,7 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(50, 210);
             this.panel2.Name = "panel2";
@@ -73,6 +74,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(50, 162);
             this.panel1.Name = "panel1";
@@ -81,9 +83,7 @@
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(57)))));
             this.buttonLogin.FlatAppearance.BorderSize = 0;
             this.buttonLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -100,6 +100,7 @@
             // 
             // passwordField
             // 
+            this.passwordField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.passwordField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordField.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -109,10 +110,12 @@
             this.passwordField.Size = new System.Drawing.Size(220, 24);
             this.passwordField.TabIndex = 4;
             this.passwordField.UseSystemPasswordChar = true;
-            this.passwordField.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.passwordField.Enter += new System.EventHandler(this.PasswordField_Enter);
+            this.passwordField.Leave += new System.EventHandler(this.PasswordField_Leave);
             // 
             // userField
             // 
+            this.userField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.userField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.userField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.userField.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -122,10 +125,12 @@
             this.userField.Name = "userField";
             this.userField.Size = new System.Drawing.Size(220, 25);
             this.userField.TabIndex = 4;
-            this.userField.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.userField.Enter += new System.EventHandler(this.UserField_Enter);
+            this.userField.Leave += new System.EventHandler(this.UserField_Leave);
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox2.Image = global::SQLApp.Properties.Resources.contacts_32;
             this.pictureBox2.Location = new System.Drawing.Point(50, 124);
             this.pictureBox2.Name = "pictureBox2";
@@ -136,6 +141,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox1.Image = global::SQLApp.Properties.Resources.lock_32;
             this.pictureBox1.Location = new System.Drawing.Point(50, 172);
             this.pictureBox1.Name = "pictureBox1";
@@ -157,6 +163,7 @@
             // 
             // singUp
             // 
+            this.singUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.singUp.AutoSize = true;
             this.singUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.singUp.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -181,8 +188,6 @@
             this.authLabel.TabIndex = 0;
             this.authLabel.Text = "Authentication Form";
             this.authLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.authLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
-            this.authLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
             // AuthForm
             // 
