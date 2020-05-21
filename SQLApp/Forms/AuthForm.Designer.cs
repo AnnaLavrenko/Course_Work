@@ -160,7 +160,7 @@
             this.singUp.AutoSize = true;
             this.singUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.singUp.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.singUp.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(46)))), ((int)(((byte)(85)))));
+            this.singUp.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.singUp.Location = new System.Drawing.Point(291, 9);
             this.singUp.Name = "singUp";
             this.singUp.Size = new System.Drawing.Size(50, 16);
@@ -174,7 +174,7 @@
             this.authLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.authLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.authLabel.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.authLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(46)))), ((int)(((byte)(85)))));
+            this.authLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.authLabel.Location = new System.Drawing.Point(0, 0);
             this.authLabel.Name = "authLabel";
             this.authLabel.Size = new System.Drawing.Size(354, 100);

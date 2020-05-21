@@ -59,6 +59,7 @@ namespace SQLApp
         {
             String loginUser = userField.Text;
             String passwordUser = passwordField.Text;
+            DateTime birthDay = new DateTime();
 
             DBHandler dbHandler = new DBHandler();
             dbHandler.OpenConnection();
@@ -71,11 +72,14 @@ namespace SQLApp
 
             mySqlDataAdapter.SelectCommand = mySqlCommand;
             mySqlDataAdapter.Fill(dbTable);
-
+            foreach (DataRow row in dbTable.Rows)
+            {
+                birthDay = (DateTime) row["birth_day"];
+            }
             if (dbTable.Rows.Count > 0)
             {
                 this.Hide();
-                Shop shop = new Shop();
+                Shop shop = new Shop(new User(loginUser, birthDay));
                 shop.Show();
                 //this.Close();
             }
@@ -83,8 +87,6 @@ namespace SQLApp
             {
                 MessageBox.Show("User doesn't exist");
             }
-
-
         }
 
         private void SingUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

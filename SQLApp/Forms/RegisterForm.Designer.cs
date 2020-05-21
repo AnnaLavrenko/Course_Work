@@ -36,6 +36,7 @@ namespace SQLApp
             this.buttonRegister = new System.Windows.Forms.Button();
             this.userField = new System.Windows.Forms.TextBox();
             this.generalPanel = new System.Windows.Forms.Panel();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -82,7 +83,7 @@ namespace SQLApp
             this.buttonRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRegister.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.buttonRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.buttonRegister.Location = new System.Drawing.Point(77, 310);
+            this.buttonRegister.Location = new System.Drawing.Point(77, 365);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(220, 30);
             this.buttonRegister.TabIndex = 5;
@@ -108,6 +109,7 @@ namespace SQLApp
             // generalPanel
             // 
             this.generalPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.generalPanel.Controls.Add(this.dateTimePicker);
             this.generalPanel.Controls.Add(this.pictureBox4);
             this.generalPanel.Controls.Add(this.pictureBox3);
             this.generalPanel.Controls.Add(this.pictureBox1);
@@ -129,6 +131,16 @@ namespace SQLApp
             this.generalPanel.Name = "generalPanel";
             this.generalPanel.Size = new System.Drawing.Size(374, 450);
             this.generalPanel.TabIndex = 1;
+            // 
+            // dateTimePicker
+            // 
+            this.dateTimePicker.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.dateTimePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.dateTimePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.dateTimePicker.Location = new System.Drawing.Point(73, 312);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(231, 23);
+            this.dateTimePicker.TabIndex = 15;
             // 
             // pictureBox4
             // 
@@ -216,7 +228,7 @@ namespace SQLApp
             // 
             this.singUp.AutoSize = true;
             this.singUp.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.singUp.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(46)))), ((int)(((byte)(85)))));
+            this.singUp.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.singUp.Location = new System.Drawing.Point(313, 7);
             this.singUp.Name = "singUp";
             this.singUp.Size = new System.Drawing.Size(49, 17);
@@ -229,7 +241,7 @@ namespace SQLApp
             // 
             this.labelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.labelHeader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(46)))), ((int)(((byte)(85)))));
+            this.labelHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.labelHeader.Location = new System.Drawing.Point(0, 0);
             this.labelHeader.Name = "labelHeader";
             this.labelHeader.Size = new System.Drawing.Size(374, 100);
@@ -253,7 +265,7 @@ namespace SQLApp
             // 
             this.LastNameField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.LastNameField.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.LastNameField.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LastNameField.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.LastNameField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.LastNameField.Location = new System.Drawing.Point(92, 217);
             this.LastNameField.Multiline = true;
@@ -261,14 +273,14 @@ namespace SQLApp
             this.LastNameField.Size = new System.Drawing.Size(220, 25);
             this.LastNameField.TabIndex = 9;
             this.LastNameField.Text = "Last Name";
-            this.LastNameField.Enter += new System.EventHandler(this.SecondNameField_Enter);
-            this.LastNameField.Leave += new System.EventHandler(this.SecondNameField_Leave);
+            this.LastNameField.Enter += new System.EventHandler(this.LastNameField_Enter);
+            this.LastNameField.Leave += new System.EventHandler(this.LastNameField_Leave);
             // 
             // firstNameField
             // 
             this.firstNameField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.firstNameField.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.firstNameField.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.firstNameField.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.firstNameField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.firstNameField.Location = new System.Drawing.Point(92, 178);
             this.firstNameField.Multiline = true;
@@ -321,5 +333,6 @@ namespace SQLApp
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.ToolTip CapsLockOntoolTip;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
     }
 }

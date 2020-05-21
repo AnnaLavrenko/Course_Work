@@ -13,8 +13,16 @@ namespace SQLApp
     public partial class CatalogueControl : UserControl
     {
         private ShoppingCart _shoppingCart;
-        private int _summ;
+        private User _user;
+                
+        public User User
+        {
+            get { return _user; }
+            set { _user = value; }
+        }
 
+        private int _summ;
+        
         public int Summ
         {
             get { return _summ; }
@@ -26,6 +34,21 @@ namespace SQLApp
             InitializeComponent();
             labelTotalPrice.Text = "0 $";
             _shoppingCart = new ShoppingCart();
+            CheckShopStatus();
+        }
+
+        public void CheckShopStatus()
+        {
+            DateTime dateTime = DateTime.Now;
+            if (dateTime.Hour > 9 && dateTime.Hour < 19)
+            {
+                labelShopStatus.Text = "Open";
+                labelShopStatus.ForeColor = Color.White;
+            } else
+            {
+                labelShopStatus.Text = "Closed";
+                labelShopStatus.ForeColor = Color.Orange;
+            }
         }
 
         private void FillShoppingCart(List<Item> items)
@@ -57,11 +80,20 @@ namespace SQLApp
         private void ShoppingCartGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Item item = (Item) shoppingCartGrid.CurrentRow.Tag;
-            if (e.ColumnIndex == 2) //Remove button
+            //Remove column
+            if (e.ColumnIndex == 2) 
             {
                 _shoppingCart.RemoveItem(item);
                 UpdateDataGrid();
             }
+        }
+
+        private void ProcessedButton_Click(object sender, EventArgs e)
+        {
+            // TODO: add birthday discount
+            //       write order to db and show order message
+            //       and calculate delivery
+
         }
     }
 }

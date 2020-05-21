@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="User.cs" />
     <Compile Include="UserControls\About.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -143,6 +144,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\shopping-cart-16-orange.png" />
     <None Include="Resources\user-5-32.png" />
     <None Include="Resources\lock-32.png" />
     <None Include="Resources\contacts-32.png" />

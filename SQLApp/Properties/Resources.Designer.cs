@@ -163,6 +163,16 @@ namespace SQLApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap shopping_cart_16_orange {
+            get {
+                object obj = ResourceManager.GetObject("shopping-cart-16-orange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shopping_cart_xxl {
             get {
                 object obj = ResourceManager.GetObject("shopping-cart-xxl", resourceCulture);

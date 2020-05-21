@@ -31,11 +31,10 @@
             this.headerPanel = new System.Windows.Forms.Panel();
             this.welcomeMessageLabel = new System.Windows.Forms.Label();
             this.sidePanel = new System.Windows.Forms.Panel();
-            this.catalogueButton = new System.Windows.Forms.Button();
             this.aboutButton = new System.Windows.Forms.Button();
+            this.catalogueButton = new System.Windows.Forms.Button();
             this.catalogueControl1 = new SQLApp.CatalogueControl();
             this.about1 = new SQLApp.About();
-            this.about2 = new SQLApp.About();
             this.headerPanel.SuspendLayout();
             this.sidePanel.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +54,7 @@
             this.welcomeMessageLabel.AutoSize = true;
             this.welcomeMessageLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.welcomeMessageLabel.Font = new System.Drawing.Font("Century Gothic", 18F);
-            this.welcomeMessageLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(46)))), ((int)(((byte)(85)))));
+            this.welcomeMessageLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.welcomeMessageLabel.Location = new System.Drawing.Point(126, 4);
             this.welcomeMessageLabel.Name = "welcomeMessageLabel";
             this.welcomeMessageLabel.Size = new System.Drawing.Size(373, 30);
@@ -71,6 +70,25 @@
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(120, 488);
             this.sidePanel.TabIndex = 5;
+            // 
+            // aboutButton
+            // 
+            this.aboutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(57)))));
+            this.aboutButton.FlatAppearance.BorderSize = 0;
+            this.aboutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.aboutButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.aboutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.aboutButton.Image = global::SQLApp.Properties.Resources.info_2_16;
+            this.aboutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.aboutButton.Location = new System.Drawing.Point(0, 38);
+            this.aboutButton.Name = "aboutButton";
+            this.aboutButton.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.aboutButton.Size = new System.Drawing.Size(120, 30);
+            this.aboutButton.TabIndex = 7;
+            this.aboutButton.Text = " About";
+            this.aboutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.aboutButton.UseVisualStyleBackColor = false;
+            this.aboutButton.Click += new System.EventHandler(this.AboutButton_Click);
             // 
             // catalogueButton
             // 
@@ -92,28 +110,9 @@
             this.catalogueButton.UseVisualStyleBackColor = false;
             this.catalogueButton.Click += new System.EventHandler(this.CatalogueButton_Click);
             // 
-            // aboutButton
-            // 
-            this.aboutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(57)))));
-            this.aboutButton.FlatAppearance.BorderSize = 0;
-            this.aboutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.aboutButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.aboutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.aboutButton.Image = global::SQLApp.Properties.Resources.info_2_16;
-            this.aboutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.aboutButton.Location = new System.Drawing.Point(0, 38);
-            this.aboutButton.Name = "aboutButton";
-            this.aboutButton.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.aboutButton.Size = new System.Drawing.Size(120, 30);
-            this.aboutButton.TabIndex = 7;
-            this.aboutButton.Text = " About";
-            this.aboutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.aboutButton.UseVisualStyleBackColor = false;
-            this.aboutButton.Click += new System.EventHandler(this.AboutButton_Click);
-            // 
             // catalogueControl1
             // 
-            this.catalogueControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.catalogueControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.catalogueControl1.Location = new System.Drawing.Point(123, 47);
             this.catalogueControl1.Name = "catalogueControl1";
             this.catalogueControl1.Size = new System.Drawing.Size(790, 415);
@@ -126,19 +125,11 @@
             this.about1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.about1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.about1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.about1.Location = new System.Drawing.Point(123, 47);
             this.about1.Name = "about1";
             this.about1.Size = new System.Drawing.Size(790, 415);
             this.about1.TabIndex = 7;
-            // 
-            // about2
-            // 
-            this.about2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.about2.Location = new System.Drawing.Point(126, 47);
-            this.about2.Name = "about2";
-            this.about2.Size = new System.Drawing.Size(790, 415);
-            this.about2.TabIndex = 8;
             // 
             // Shop
             // 
@@ -151,7 +142,6 @@
             this.Controls.Add(this.catalogueButton);
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.headerPanel);
-            this.Controls.Add(this.about2);
             this.Name = "Shop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Shop";
@@ -172,6 +162,5 @@
         private CatalogueControl catalogueControl1;
         private System.Windows.Forms.Button aboutButton;
         private About about1;
-        private About about2;
     }
 }

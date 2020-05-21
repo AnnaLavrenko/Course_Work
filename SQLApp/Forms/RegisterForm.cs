@@ -16,7 +16,7 @@ namespace SQLApp
             userField.ForeColor = Color.Gray;
             firstNameField.Text = "First Name";
             firstNameField.ForeColor = Color.Gray;
-            LastNameField.Text = "Second Name";
+            LastNameField.Text = "Last Name";
             LastNameField.ForeColor = Color.Gray;
             passwordField.Text = "Password";
         }
@@ -58,34 +58,30 @@ namespace SQLApp
             }
         }
 
-        private void SecondNameField_Enter(object sender, EventArgs e)
+        private void LastNameField_Enter(object sender, EventArgs e)
         {
-            if (LastNameField.Text == "Second Name")
+            if (LastNameField.Text == "Last Name")
             {
                 LastNameField.Text = "";
                 LastNameField.ForeColor = Color.White;
             }
         }
 
-        private void SecondNameField_Leave(object sender, EventArgs e)
+        private void LastNameField_Leave(object sender, EventArgs e)
         {
             if (LastNameField.Text == "")
             {
-                LastNameField.Text = "Password";
+                LastNameField.Text = "Last Name";
                 LastNameField.ForeColor = Color.Gray;
             }
         }
 
         private void PasswordField_Enter(object sender, EventArgs e)
         {
-            if (passwordField.Text == "Password")
-            {
-                if (Control.IsKeyLocked(Keys.CapsLock))
-                    CapsLockOntoolTip.SetToolTip(passwordField, "CAPS LOCK IS ON");
-                passwordField.Clear();
-                passwordField.Text = "";
-                passwordField.ForeColor = Color.White;
-            }
+            if (Control.IsKeyLocked(Keys.CapsLock))
+                CapsLockOntoolTip.SetToolTip(passwordField, "CAPS LOCK IS ON");
+            passwordField.Clear();
+            passwordField.ForeColor = Color.White;
         }
 
         private void PasswordField_Leave(object sender, EventArgs e)
@@ -117,21 +113,23 @@ namespace SQLApp
                 return;
             }
 
-
-
             if (IsUserExist()) return;
 
             DBHandler dBHandler = new DBHandler();
             dBHandler.OpenConnection();
-            MySqlCommand mySqlCommand = new MySqlCommand("INSERT INTO `test_db`.`users` (`login`, `password`, `first_name`, `second_name`) VALUES (@login, @password, @firstName, @secondName)", dBHandler.GetConnection());
+            MySqlCommand mySqlCommand = new MySqlCommand("INSERT INTO `test_db`.`users` (`login`, `password`, `first_name`, `last_name`, `birth_day`) VALUES (@login, @password, @firstName, @lastName, @birthDay)", dBHandler.GetConnection());
             mySqlCommand.Parameters.Add("@login", MySqlDbType.VarChar).Value = userField.Text;
             mySqlCommand.Parameters.Add("@password", MySqlDbType.VarChar).Value = passwordField.Text;
             mySqlCommand.Parameters.Add("@firstName", MySqlDbType.VarChar).Value = firstNameField.Text;
-            mySqlCommand.Parameters.Add("@secondName", MySqlDbType.VarChar).Value = LastNameField.Text;
+            mySqlCommand.Parameters.Add("@lastName", MySqlDbType.VarChar).Value = LastNameField.Text;
+            mySqlCommand.Parameters.Add("@birthDay", MySqlDbType.Date).Value = dateTimePicker.Value;
             
             if (mySqlCommand.ExecuteNonQuery() == 1)
             {
                 MessageBox.Show("User successfully created");
+                this.Hide();
+                AuthForm authForm = new AuthForm();
+                authForm.Show();
             }
             else
             {
