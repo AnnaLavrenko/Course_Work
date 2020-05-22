@@ -8,15 +8,15 @@ namespace SQLApp
 {
     class Item
     {
+        private string _title;
+        private string _price;
 
         public Item(string title, string price)
         {
             _title = title;
             _price = price;
         }
-        private string _title;
-        private string _price;
-
+        
         public string Price
         {
             get { return _price; }
@@ -28,7 +28,5 @@ namespace SQLApp
             get { return _title; }
             set { _title = value; }
         }
-
-
     }
 }

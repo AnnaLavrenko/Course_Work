@@ -54,7 +54,6 @@ namespace SQLApp
         {
             about1.Hide();
             catalogueControl1.Show();
-
         }
     }
 }

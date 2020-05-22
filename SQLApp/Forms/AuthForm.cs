@@ -16,6 +16,7 @@ namespace SQLApp
         public AuthForm()
         {
             InitializeComponent();
+            /*отрисовка текста при создании обьекта*/
             userField.Text = "Login";
             userField.ForeColor = Color.Gray;
             passwordField.Text = "Password";
@@ -25,16 +26,10 @@ namespace SQLApp
             this.ActiveControl = authLabel;
         }
 
-
-        private void closeWindowButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            String loginUser = userField.Text;
-            String passwordUser = passwordField.Text;
+            string loginUser = userField.Text;
+            string passwordUser = passwordField.Text;
             DateTime birthDay = new DateTime();
 
             DBHandler dbHandler = new DBHandler();
@@ -76,6 +71,7 @@ namespace SQLApp
             Application.Exit();
         }
 
+        // для placeholder
         private void UserField_Enter(object sender, EventArgs e)
         {
             if (userField.Text == "Login")

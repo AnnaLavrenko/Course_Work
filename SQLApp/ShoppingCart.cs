@@ -17,7 +17,6 @@ namespace SQLApp
             set { _summ = value; }
         }
 
-
         public ShoppingCart()
         {
             Items = new List<Item>();

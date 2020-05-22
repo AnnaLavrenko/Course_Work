@@ -14,14 +14,13 @@ namespace SQLApp
     {
         private ShoppingCart _shoppingCart;
         private User _user;
-                
+        private int _summ;
+
         public User User
         {
             get { return _user; }
             set { _user = value; }
         }
-
-        private int _summ;
         
         public int Summ
         {
@@ -61,6 +60,7 @@ namespace SQLApp
                     item.Price,
                     "X"
                 });
+                //записывает item в rows tag
                 shoppingCartGrid.Rows[shoppingCartGrid.RowCount - 1].Tag = item;
             }
         }
@@ -73,7 +73,7 @@ namespace SQLApp
         
         private void BuyButton_Click(object sender, EventArgs e)
         {
-            _shoppingCart.AddItem(new Item(label1.Text, labelPrice.Text));
+            _shoppingCart.AddItem(new Item(burgerLabel.Text, labelPrice.Text));
             UpdateDataGrid();
         }
 
@@ -94,6 +94,36 @@ namespace SQLApp
             //       write order to db and show order message
             //       and calculate delivery
 
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            _shoppingCart.AddItem(new Item(label5.Text, label4.Text));
+            UpdateDataGrid();
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            _shoppingCart.AddItem(new Item(label8.Text, label7.Text));
+            UpdateDataGrid();
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            _shoppingCart.AddItem(new Item(label11.Text, label10.Text));
+            UpdateDataGrid();
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            _shoppingCart.AddItem(new Item(label14.Text, label13.Text));
+            UpdateDataGrid();
+        }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            _shoppingCart.AddItem(new Item(label17.Text, label16.Text));
+            UpdateDataGrid();
         }
     }
 }
