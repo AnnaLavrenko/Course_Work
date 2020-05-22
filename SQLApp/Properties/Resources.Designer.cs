@@ -73,6 +73,26 @@ namespace SQLApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _20150702_sous_vide_hamburger_anova_primary_1500x11251 {
+            get {
+                object obj = ResourceManager.GetObject("20150702-sous-vide-hamburger-anova-primary-1500x11251", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20150702_sous_vide_hamburger_anova_primary_1500x11252 {
+            get {
+                object obj = ResourceManager.GetObject("20150702-sous-vide-hamburger-anova-primary-1500x11252", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap address_white_icon_png_ {
             get {
                 object obj = ResourceManager.GetObject("address-white-icon-png-", resourceCulture);
