@@ -152,12 +152,11 @@
     <None Include="Resources\address-white-icon-png-.png" />
     <None Include="Resources\shopping-cart-16.png" />
     <None Include="Resources\shopping-cart-xxl.png" />
-    <None Include="images\20150702-sous-vide-hamburger-anova-primary-1500x1125.jpg" />
-    <None Include="images\close.png" />
-    <Content Include="images\iconfinder_user-alt_285645.png" />
-    <Content Include="images\iconfinder_user_1608727.png" />
-    <Content Include="images\password.png" />
-    <Content Include="images\user.png" />
+    <None Include="Resources\close.png" />
+    <Content Include="Resources\iconfinder_user-alt_285645.png" />
+    <Content Include="Resources\iconfinder_user_1608727.png" />
+    <Content Include="Resources\password.png" />
+    <Content Include="Resources\user.png" />
     <None Include="Resources\20150702-sous-vide-hamburger-anova-primary-1500x1125.jpg" />
   </ItemGroup>
   <ItemGroup>
