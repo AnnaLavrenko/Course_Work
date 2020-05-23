@@ -10,6 +10,13 @@ namespace SQLApp
     {
         private List<Item> _items;
         private double _summ;
+        private double _discount;
+
+        public double Discount
+        {
+            get { return _discount; }
+            set { _discount = value; }
+        }
 
         public double Summ
         {
@@ -26,12 +33,23 @@ namespace SQLApp
         {
             _items.Add(item);
         }
-        public double CalculateSumm()
+        public double CalculateSumm(bool isBirthDayToday)
         {
             _summ = 0;
-            foreach(Item item in _items)
+            _discount = 0;
+
+            foreach (Item item in _items)
             {
                 _summ += Int16.Parse(item.Price);
+            }
+            if (_summ > 1000)
+            {
+                _discount = _summ * 0.05;
+                _summ -= _discount;
+            } else if(isBirthDayToday)
+            {
+                _discount = _summ * 0.1;
+                _summ -= _discount;
             }
             return _summ;
         }
@@ -42,5 +60,10 @@ namespace SQLApp
         }
 
         internal List<Item> Items { get => _items; set => _items = value; }
+
+        public override string ToString()
+        {
+            return "Your sum:" + this._summ;
+        }
     }
 }

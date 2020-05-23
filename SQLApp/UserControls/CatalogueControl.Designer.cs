@@ -151,9 +151,9 @@
             this.labelPrice.Location = new System.Drawing.Point(100, 143);
             this.labelPrice.Margin = new System.Windows.Forms.Padding(0);
             this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(36, 25);
+            this.labelPrice.Size = new System.Drawing.Size(48, 25);
             this.labelPrice.TabIndex = 2;
-            this.labelPrice.Text = "15";
+            this.labelPrice.Text = "500";
             // 
             // pictureBox1
             // 

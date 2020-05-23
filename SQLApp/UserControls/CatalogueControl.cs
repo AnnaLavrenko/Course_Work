@@ -68,7 +68,7 @@ namespace SQLApp
         private void UpdateDataGrid()
         {
             FillShoppingCart(_shoppingCart.Items);
-            labelTotalPrice.Text = _shoppingCart.CalculateSumm().ToString() + "$";
+            labelTotalPrice.Text = _shoppingCart.CalculateSumm(_user.IsBirthDayToDay()).ToString() + "$";
         }
         
         private void BuyButton_Click(object sender, EventArgs e)
@@ -90,10 +90,9 @@ namespace SQLApp
 
         private void ProcessedButton_Click(object sender, EventArgs e)
         {
-            // TODO: add birthday discount
-            //       write order to db and show order message
-            //       and calculate delivery
-
+            MessageBox.Show("You order " + shoppingCartGrid.Rows.Count.ToString() + " items\n"
+                + "Order sum: " + _shoppingCart.Summ.ToString() + "$" + "\n" 
+                + "Your discount is: " + _shoppingCart.Discount.ToString() + "$");
         }
 
         private void Button1_Click(object sender, EventArgs e)

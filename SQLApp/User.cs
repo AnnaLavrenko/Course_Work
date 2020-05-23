@@ -12,6 +12,14 @@ namespace SQLApp
         private string _lastName;
         private string _userName;
         private DateTime _birthDay;
+        private bool isBirthDayToday;
+
+        public bool IsBirthDayToday
+        {
+            get { return isBirthDayToday; }
+            set { isBirthDayToday = value; }
+        }
+
 
         public User(string userName)
         {
@@ -21,6 +29,16 @@ namespace SQLApp
         {
             _userName = userName;
             _birthDay = birthDay;
+        }
+
+
+        public bool IsBirthDayToDay()
+        {
+            if (DateTime.Today == _birthDay && DateTime.Today.AddDays(3) == _birthDay.AddDays(3))
+            {
+                return true;
+            }
+            return false;
         }
 
         public DateTime BirthDay
