@@ -55,5 +55,10 @@ namespace SQLApp
             about1.Hide();
             catalogueControl1.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

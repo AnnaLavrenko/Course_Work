@@ -124,5 +124,10 @@ namespace SQLApp
             _shoppingCart.AddItem(new Item(label17.Text, label16.Text));
             UpdateDataGrid();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

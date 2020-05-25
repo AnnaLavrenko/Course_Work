@@ -38,6 +38,7 @@ namespace SQLApp
         {
             return connection;
         }
+
         public void ExecuteCommand (MySqlCommand commandToExecute)
         {
             commandToExecute.ExecuteNonQuery();

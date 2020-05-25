@@ -20,6 +20,7 @@ namespace SQLApp
             LastNameField.ForeColor = Color.Gray;
             passwordField.Text = "Password";
             this.ActiveControl = labelHeader;
+            button1.Hide(); 
         }
 
         private void UserField_Enter(object sender, EventArgs e)
