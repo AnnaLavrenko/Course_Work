@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CatalogueControl));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.addButton = new System.Windows.Forms.Button();
@@ -39,6 +39,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.burgerLabel = new System.Windows.Forms.Label();
             this.panelShoppingCart = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.processedButton = new System.Windows.Forms.Button();
             this.shoppingCartGrid = new System.Windows.Forms.DataGridView();
             this.itemColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,7 +80,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.labelShopStatus = new System.Windows.Forms.Label();
             this.shopInfo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelShoppingCart.SuspendLayout();
@@ -106,7 +106,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.burgerLabel);
             this.panel1.Location = new System.Drawing.Point(4, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(212, 219);
             this.panel1.TabIndex = 0;
@@ -134,7 +134,7 @@
             this.addButton.Image = global::SQLApp.Properties.Resources.shopping_cart_16_orange;
             this.addButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addButton.Location = new System.Drawing.Point(8, 176);
-            this.addButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addButton.Margin = new System.Windows.Forms.Padding(4);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(100, 31);
             this.addButton.TabIndex = 3;
@@ -151,7 +151,7 @@
             this.labelPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelPrice.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.labelPrice.Location = new System.Drawing.Point(133, 176);
+            this.labelPrice.Location = new System.Drawing.Point(122, 176);
             this.labelPrice.Margin = new System.Windows.Forms.Padding(0);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(60, 32);
@@ -163,7 +163,7 @@
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(47, 44);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(92, 88);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -190,10 +190,22 @@
             this.panelShoppingCart.Controls.Add(this.labelTotalPrice);
             this.panelShoppingCart.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelShoppingCart.Location = new System.Drawing.Point(757, 0);
-            this.panelShoppingCart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelShoppingCart.Margin = new System.Windows.Forms.Padding(4);
             this.panelShoppingCart.Name = "panelShoppingCart";
             this.panelShoppingCart.Size = new System.Drawing.Size(296, 511);
             this.panelShoppingCart.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(73, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(175, 29);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Shopping Card";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // processedButton
             // 
@@ -206,7 +218,7 @@
             this.processedButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.processedButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.processedButton.Location = new System.Drawing.Point(164, 471);
-            this.processedButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.processedButton.Margin = new System.Windows.Forms.Padding(4);
             this.processedButton.Name = "processedButton";
             this.processedButton.Size = new System.Drawing.Size(128, 36);
             this.processedButton.TabIndex = 2;
@@ -229,7 +241,7 @@
             this.RemoveColumn});
             this.shoppingCartGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.shoppingCartGrid.Location = new System.Drawing.Point(0, 53);
-            this.shoppingCartGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.shoppingCartGrid.Margin = new System.Windows.Forms.Padding(4);
             this.shoppingCartGrid.Name = "shoppingCartGrid";
             this.shoppingCartGrid.ReadOnly = true;
             this.shoppingCartGrid.RowHeadersVisible = false;
@@ -242,16 +254,16 @@
             // 
             // itemColumn
             // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.itemColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.itemColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.itemColumn.HeaderText = "Item";
             this.itemColumn.Name = "itemColumn";
             this.itemColumn.ReadOnly = true;
             // 
             // Price
             // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Price.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Price.DefaultCellStyle = dataGridViewCellStyle2;
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
@@ -259,11 +271,11 @@
             // RemoveColumn
             // 
             this.RemoveColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(46)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            this.RemoveColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(46)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            this.RemoveColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.RemoveColumn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RemoveColumn.HeaderText = "";
             this.RemoveColumn.Name = "RemoveColumn";
@@ -293,7 +305,7 @@
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(224, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(212, 219);
             this.panel2.TabIndex = 5;
@@ -321,7 +333,7 @@
             this.button1.Image = global::SQLApp.Properties.Resources.shopping_cart_16_orange;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(8, 176);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 31);
             this.button1.TabIndex = 3;
@@ -350,7 +362,7 @@
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(47, 44);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(92, 88);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -378,7 +390,7 @@
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Location = new System.Drawing.Point(444, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(212, 219);
             this.panel3.TabIndex = 5;
@@ -406,7 +418,7 @@
             this.button2.Image = global::SQLApp.Properties.Resources.shopping_cart_16_orange;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(8, 176);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 31);
             this.button2.TabIndex = 3;
@@ -435,7 +447,7 @@
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(47, 44);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(92, 88);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -463,7 +475,7 @@
             this.panel4.Controls.Add(this.pictureBox4);
             this.panel4.Controls.Add(this.label11);
             this.panel4.Location = new System.Drawing.Point(4, 226);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(212, 219);
             this.panel4.TabIndex = 5;
@@ -491,7 +503,7 @@
             this.button3.Image = global::SQLApp.Properties.Resources.shopping_cart_16_orange;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(8, 176);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 31);
             this.button3.TabIndex = 3;
@@ -520,7 +532,7 @@
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(47, 44);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(92, 88);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -548,7 +560,7 @@
             this.panel5.Controls.Add(this.pictureBox5);
             this.panel5.Controls.Add(this.label14);
             this.panel5.Location = new System.Drawing.Point(224, 226);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(212, 219);
             this.panel5.TabIndex = 5;
@@ -576,7 +588,7 @@
             this.button4.Image = global::SQLApp.Properties.Resources.shopping_cart_16_orange;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(8, 176);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 31);
             this.button4.TabIndex = 3;
@@ -605,7 +617,7 @@
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(47, 44);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(92, 88);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -633,7 +645,7 @@
             this.panel6.Controls.Add(this.pictureBox6);
             this.panel6.Controls.Add(this.label17);
             this.panel6.Location = new System.Drawing.Point(444, 226);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(212, 219);
             this.panel6.TabIndex = 5;
@@ -661,7 +673,7 @@
             this.button5.Image = global::SQLApp.Properties.Resources.shopping_cart_16_orange;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(8, 176);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(100, 31);
             this.button5.TabIndex = 3;
@@ -690,7 +702,7 @@
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(47, 44);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(92, 88);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -716,7 +728,7 @@
             this.panelFooter.Controls.Add(this.shopInfo);
             this.panelFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelFooter.Location = new System.Drawing.Point(0, 453);
-            this.panelFooter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelFooter.Margin = new System.Windows.Forms.Padding(4);
             this.panelFooter.Name = "panelFooter";
             this.panelFooter.Size = new System.Drawing.Size(757, 58);
             this.panelFooter.TabIndex = 9;
@@ -725,7 +737,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Location = new System.Drawing.Point(16, 46);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(413, 1);
             this.panel7.TabIndex = 2;
@@ -756,18 +768,6 @@
             this.shopInfo.TabIndex = 0;
             this.shopInfo.Text = "Working hours: 9:00am - 7:00pm";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(73, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 29);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Shopping Card";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // CatalogueControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -781,7 +781,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelShoppingCart);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CatalogueControl";
             this.Size = new System.Drawing.Size(1053, 511);
             this.panel1.ResumeLayout(false);

@@ -26,7 +26,7 @@ namespace SQLApp
             this.ActiveControl = authLabel;
         }
 
-        private void buttonLogin_Click(object sender, EventArgs e)
+        private void ButtonLogin_Click(object sender, EventArgs e)
         {
             string loginUser = userField.Text;
             string passwordUser = passwordField.Text;
@@ -37,9 +37,9 @@ namespace SQLApp
             DataTable dbTable = new DataTable();
             MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter();
 
-            MySqlCommand mySqlCommand = new MySqlCommand("select * from users where login=@uL and password=@uP", dbHandler.GetConnection());
-            mySqlCommand.Parameters.Add("@uP", MySqlDbType.VarChar).Value = passwordUser;
-            mySqlCommand.Parameters.Add("@uL", MySqlDbType.VarChar).Value = loginUser;
+            MySqlCommand mySqlCommand = new MySqlCommand("select * from users where login=@login and password=@password", dbHandler.GetConnection());
+            mySqlCommand.Parameters.Add("@login", MySqlDbType.VarChar).Value = loginUser;
+            mySqlCommand.Parameters.Add("@password", MySqlDbType.VarChar).Value = passwordUser;
 
             mySqlDataAdapter.SelectCommand = mySqlCommand;
             mySqlDataAdapter.Fill(dbTable);

@@ -12,7 +12,7 @@ namespace SQLApp
         private string _lastName;
         private string _userName;
         private DateTime _birthDay;
-        private bool isBirthDayToday;//test commit
+        private bool isBirthDayToday;
 
         public bool IsBirthDayToday
         {
@@ -25,6 +25,7 @@ namespace SQLApp
         {
             _userName = userName;
         }
+
         public User(string userName, DateTime birthDay)
         {
             _userName = userName;

@@ -96,7 +96,7 @@
             this.buttonLogin.TabIndex = 5;
             this.buttonLogin.Text = "Sing In";
             this.buttonLogin.UseVisualStyleBackColor = false;
-            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
+            this.buttonLogin.Click += new System.EventHandler(this.ButtonLogin_Click);
             // 
             // passwordField
             // 

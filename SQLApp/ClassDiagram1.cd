@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SQLApp.AuthForm">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AACIGQAABCAACAAABACEAAAaAAAAAAgAAAAIAQJAAAA=</HashCode>
+      <FileName>Forms\AuthForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLApp.RegisterForm">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ACCCAxCJFCJCCAICBCCAAAACAAAIQAgAAAAIAQJCAAI=</HashCode>
+      <FileName>Forms\RegisterForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLApp.Shop">
+    <Position X="7.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIBEAQAACAAAAEAAACDBIACAAEAAIAACAAAACAAAAQ=</HashCode>
+      <FileName>Forms\Shop.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_user" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SQLApp.User">
+    <Position X="10" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAEAAAAAAAAAAQAEAAAAAAAIIAAACAQIAAAAAAAg=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLApp.ShoppingCart">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEgAAAAAAAADAAEAAAAAAAAgBAEAAAEAgAAAAAAAAA=</HashCode>
+      <FileName>ShoppingCart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLApp.Item">
+    <Position X="10" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAYAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
