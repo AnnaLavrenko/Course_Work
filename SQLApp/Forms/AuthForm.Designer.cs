@@ -59,26 +59,29 @@
             this.authPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.authPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.authPanel.Location = new System.Drawing.Point(0, 0);
+            this.authPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.authPanel.Name = "authPanel";
-            this.authPanel.Size = new System.Drawing.Size(354, 446);
+            this.authPanel.Size = new System.Drawing.Size(472, 549);
             this.authPanel.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(50, 210);
+            this.panel2.Location = new System.Drawing.Point(67, 258);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 1);
+            this.panel2.Size = new System.Drawing.Size(333, 1);
             this.panel2.TabIndex = 7;
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(50, 162);
+            this.panel1.Location = new System.Drawing.Point(67, 199);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 1);
+            this.panel1.Size = new System.Drawing.Size(333, 1);
             this.panel1.TabIndex = 6;
             // 
             // buttonLogin
@@ -90,9 +93,10 @@
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.buttonLogin.Location = new System.Drawing.Point(68, 253);
+            this.buttonLogin.Location = new System.Drawing.Point(91, 311);
+            this.buttonLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(220, 30);
+            this.buttonLogin.Size = new System.Drawing.Size(293, 37);
             this.buttonLogin.TabIndex = 5;
             this.buttonLogin.Text = "Sing In";
             this.buttonLogin.UseVisualStyleBackColor = false;
@@ -105,9 +109,10 @@
             this.passwordField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordField.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passwordField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.passwordField.Location = new System.Drawing.Point(88, 176);
+            this.passwordField.Location = new System.Drawing.Point(117, 217);
+            this.passwordField.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.passwordField.Name = "passwordField";
-            this.passwordField.Size = new System.Drawing.Size(220, 24);
+            this.passwordField.Size = new System.Drawing.Size(293, 30);
             this.passwordField.TabIndex = 4;
             this.passwordField.UseSystemPasswordChar = true;
             this.passwordField.Enter += new System.EventHandler(this.PasswordField_Enter);
@@ -120,10 +125,11 @@
             this.userField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.userField.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.userField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.userField.Location = new System.Drawing.Point(86, 131);
+            this.userField.Location = new System.Drawing.Point(115, 161);
+            this.userField.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userField.Multiline = true;
             this.userField.Name = "userField";
-            this.userField.Size = new System.Drawing.Size(220, 25);
+            this.userField.Size = new System.Drawing.Size(293, 31);
             this.userField.TabIndex = 4;
             this.userField.Enter += new System.EventHandler(this.UserField_Enter);
             this.userField.Leave += new System.EventHandler(this.UserField_Leave);
@@ -132,9 +138,10 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox2.Image = global::SQLApp.Properties.Resources.contacts_32;
-            this.pictureBox2.Location = new System.Drawing.Point(50, 124);
+            this.pictureBox2.Location = new System.Drawing.Point(67, 153);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.Size = new System.Drawing.Size(43, 39);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -143,9 +150,10 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox1.Image = global::SQLApp.Properties.Resources.lock_32;
-            this.pictureBox1.Location = new System.Drawing.Point(50, 172);
+            this.pictureBox1.Location = new System.Drawing.Point(67, 212);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(43, 39);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -157,8 +165,9 @@
             this.headerPanel.Controls.Add(this.authLabel);
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(0, 0);
+            this.headerPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(354, 100);
+            this.headerPanel.Size = new System.Drawing.Size(472, 123);
             this.headerPanel.TabIndex = 0;
             // 
             // singUp
@@ -168,9 +177,10 @@
             this.singUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.singUp.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.singUp.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.singUp.Location = new System.Drawing.Point(291, 9);
+            this.singUp.Location = new System.Drawing.Point(388, 11);
+            this.singUp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.singUp.Name = "singUp";
-            this.singUp.Size = new System.Drawing.Size(50, 16);
+            this.singUp.Size = new System.Drawing.Size(62, 18);
             this.singUp.TabIndex = 7;
             this.singUp.TabStop = true;
             this.singUp.Text = "Sing up";
@@ -183,18 +193,20 @@
             this.authLabel.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.authLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.authLabel.Location = new System.Drawing.Point(0, 0);
+            this.authLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.authLabel.Name = "authLabel";
-            this.authLabel.Size = new System.Drawing.Size(354, 100);
+            this.authLabel.Size = new System.Drawing.Size(472, 123);
             this.authLabel.TabIndex = 0;
             this.authLabel.Text = "Authentication Form";
             this.authLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AuthForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 446);
+            this.ClientSize = new System.Drawing.Size(472, 549);
             this.Controls.Add(this.authPanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AuthForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AuthForm";

@@ -42,13 +42,14 @@ namespace SQLApp
             {
                 _summ += Int16.Parse(item.Price);
             }
-            if (_summ > 1000)
-            {
-                _discount = _summ * 0.05;
-                _summ -= _discount;
-            } else if(isBirthDayToday)
+             if(isBirthDayToday)
             {
                 _discount = _summ * 0.1;
+                _summ -= _discount;
+            }
+           else if (_summ > 1000)
+            {
+                _discount = _summ * 0.05;
                 _summ -= _discount;
             }
             return _summ;
